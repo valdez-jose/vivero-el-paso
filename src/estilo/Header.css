@@ -1,0 +1,51 @@
+
+.header {
+  background-image: url('./imagenes/vivero3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  width: 100px;
+  border-radius: 90%;
+}
+
+/* Contenedor de botones */
+.navegacion {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navegacion button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color:blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navegacion button:hover {
+  background-color: #45a049;
+}
+
+/* === Media query para móviles === */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navegacion {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
