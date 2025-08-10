@@ -6,7 +6,7 @@ import '../estilo/Bienvenida.css';
 function Bienvenida() {
   return (
     <div className="bienvenida">
-      <img src="./imagenes/vivero4.jpg" alt="Jardín" className="imagen-jardin" />
+      <img src="/imagenes/vivero4.jpg" alt="Jardín" className="imagen-jardin" />
       <div className="texto">
         <h1>Bienvenido al vivero El Paso</h1>
         <p>
