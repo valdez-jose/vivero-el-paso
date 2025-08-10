@@ -4,7 +4,7 @@ const Header = ({ onCategoriaSeleccionada }) => {
   return (
     <header className='header'>
        <div className="logo">
-        <img src="/logo2.jpg" alt="Logo Vivero" />
+        <img src="logo2.jpg" alt="Logo Vivero" />
       </div>
       
       <nav className="navegacion">
