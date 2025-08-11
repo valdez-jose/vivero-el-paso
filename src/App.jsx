@@ -5,6 +5,7 @@ import CarList from './components/CarList'
 import Categoria from './components/Categoria'
 import Bienvenida from './components/Bienvenida'
 import { productos as data } from './data/productos'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       {categoriaSeleccionada && (
         <CarList productos={data[categoriaSeleccionada]} />
       )}
+      <Footer />
     </>
   )
 }
