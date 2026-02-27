@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .logo img {
@@ -16,17 +16,16 @@
   border-radius: 90%;
 }
 
-/* Contenedor de botones */
+/* Navegación desktop */
 .navegacion {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .navegacion button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color:blue;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 5px;
@@ -37,15 +36,42 @@
   background-color: #45a049;
 }
 
-/* === Media query para móviles === */
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    text-align: center;
+/* Botón hamburguesa oculto en desktop */
+.hamburguesa {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+
+  .hamburguesa {
+    display: block;
   }
 
   .navegacion {
-    justify-content: center;
-    margin-top: 1rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 0.5rem 0; /* antes 1rem */
+    text-align: center;
+    gap: 0.5rem; /* 👈 controla espacio entre botones */
+  }
+
+  .navegacion.activo {
+    display: flex;
+  }
+
+  .navegacion button {
+    margin: 0; /* eliminamos margin extra */
+    padding: 0.4rem 1rem; /* un poco más compacto */
   }
 }

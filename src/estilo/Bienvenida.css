@@ -3,23 +3,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+  gap: 2rem;             /* espacio entre imagen y texto */
+  padding: 2rem 2rem;     /* padding general */
   background-color: #f0fdf4;
   border-top: 2px solid #c8e6c9;
+  flex-wrap: wrap;        /* para que en móvil se apilen sin romper */
 }
 
-/* Imagen */
-.imagen-jardin {
-  width: 300px;
-  max-width: 100%;
-  border-radius: 8px;
+/* Contenedor de imagen */
+.contenedor-imagen {
+  width: 420px;           /* tamaño desktop */
+  flex-shrink: 0;         /* evita que se achique en flex */
+}
+
+.contenedor-imagen img {
+  width: 100%;
+  height: auto;           /* mantiene proporción */
+  border-radius: 12px;
+  display: block;
 }
 
 /* Texto */
 .texto {
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .texto h1 {
@@ -34,19 +40,31 @@
   color: #4b4b4b;
 }
 
-/* Hacemos Responsividad para pantallas pequeñas */
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .contenedor-imagen {
+    width: 300px;          /* más pequeño que desktop */
+  }
+}
+
+/* Móviles */
 @media (max-width: 768px) {
   .bienvenida {
-    flex-direction: column;
+    flex-direction: column; /* apilar vertical */
     text-align: center;
+    padding: 1rem;          /* menos padding en móvil */
+    gap: 1rem;              /* menos espacio */
   }
 
-  .texto {
-    padding: 1rem;
+  .contenedor-imagen {
+    width: 85%;             /* ocupa gran parte del ancho */
+    max-width: 320px;       /* límite para no ser gigante */
   }
 
   .texto h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .texto p {

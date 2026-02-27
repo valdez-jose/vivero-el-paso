@@ -1,12 +1,14 @@
 
 import '../estilo/Bienvenida.css';
 
-
-
 function Bienvenida() {
   return (
     <div className="bienvenida">
-      <img src="vivero3.jpg" alt="Jardín" className="imagen-jardin" />
+      
+      <div className="contenedor-imagen">
+        <img src="vivero3.jpg" alt="Jardín" />
+      </div>
+
       <div className="texto">
         <h1>Bienvenido al vivero El Paso</h1>
         <p>
@@ -15,6 +17,7 @@ function Bienvenida() {
           Cuidamos cada detalle para ofrecerte lo mejor de la naturaleza.
         </p>
       </div>
+
     </div>
   )
 }
