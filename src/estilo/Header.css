@@ -48,6 +48,11 @@
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+  .header {
+    height: auto; /* Deja que el contenido defina el alto en móvil */
+    min-height: 100px;
+    padding: 1rem;
+  }
 
   .hamburguesa {
     display: block;
@@ -57,21 +62,16 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 200px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    top: 100%; /* 👈 IMPORTANTE: Esto lo pega justo debajo del header, sea cual sea su alto */
+    left: 0;
+    background: rgba(0, 0, 0, 0.95); /* Un poco más opaco para que no se trasluzca el fondo */
     width: 100%;
-    padding: 0.5rem 0; /* antes 1rem */
-    text-align: center;
-    gap: 0.5rem; /* 👈 controla espacio entre botones */
+    padding: 1rem 0;
+    gap: 10px;
+    z-index: 999;
   }
 
   .navegacion.activo {
     display: flex;
-  }
-
-  .navegacion button {
-    margin: 0; /* eliminamos margin extra */
-    padding: 0.4rem 1rem; /* un poco más compacto */
   }
 }
