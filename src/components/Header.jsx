@@ -21,10 +21,22 @@ const Header = ({ onCategoriaSeleccionada }) => {
       </button>
 
       <nav className={`navegacion ${menuAbierto ? "activo" : ""}`}>
+
         <button onClick={() => { onCategoriaSeleccionada(null); setMenuAbierto(false); }}>Home</button>
         <button onClick={() => { onCategoriaSeleccionada("plantas"); setMenuAbierto(false); }}>Plantas</button>
         <button onClick={() => { onCategoriaSeleccionada("herramientas"); setMenuAbierto(false); }}>Herramientas</button>
         <button onClick={() => { onCategoriaSeleccionada("regaderas"); setMenuAbierto(false); }}>Regaderas</button>
+        
+        {/* Enlace al portafolio */}
+        <a 
+          href="https://valdez-jose.github.io/mi-portafolio/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="boton-portafolio"
+          onClick={() => setMenuAbierto(false)}
+        >
+          Mi Portafolio
+        </a>
       </nav>
     </header>
   );

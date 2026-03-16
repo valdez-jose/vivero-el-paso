@@ -20,20 +20,35 @@
 .navegacion {
   display: flex;
   gap: 1rem;
+  align-items: center; /* Para que el botón y los enlaces se alineen */
 }
 
-.navegacion button {
+.navegacion button, .boton-portafolio {
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: blue;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navegacion button {
+  background-color: blue;
+  color: white;
+}
+
+.navegacion .boton-portafolio {
+  background-color: #ff5722; /* Color naranja para destacar */
+  color: white;
 }
 
 .navegacion button:hover {
   background-color: #45a049;
+}
+
+.navegacion .boton-portafolio:hover {
+  background-color: #e64a19;
 }
 
 /* Botón hamburguesa oculto en desktop */
@@ -46,10 +61,10 @@
   cursor: pointer;
 }
 
-/* ====== RESPONSIVE ====== */
+/* ====== RESPONSIVE (Móvil) ====== */
 @media (max-width: 768px) {
   .header {
-    height: auto; /* Deja que el contenido defina el alto en móvil */
+    height: auto;
     min-height: 100px;
     padding: 1rem;
   }
@@ -62,16 +77,23 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 100%; /* 👈 IMPORTANTE: Esto lo pega justo debajo del header, sea cual sea su alto */
+    top: 100%;
     left: 0;
-    background: rgba(0, 0, 0, 0.95); /* Un poco más opaco para que no se trasluzca el fondo */
+    background: rgba(0, 0, 0, 0.95);
     width: 100%;
     padding: 1rem 0;
-    gap: 10px;
+    gap: 15px;
     z-index: 999;
   }
 
   .navegacion.activo {
     display: flex;
+  }
+
+  /* Ajuste del botón portafolio en móvil */
+  .navegacion .boton-portafolio {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
   }
 }
