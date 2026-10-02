@@ -29,7 +29,7 @@ const Header = ({ onCategoriaSeleccionada }) => {
         
         {/* Enlace al portafolio */}
         <a 
-          href="https://valdez-jose.github.io/mi-portafolio/" 
+          href="https://nuevo-portafolio-angular.vercel.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="boton-portafolio"
